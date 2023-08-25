@@ -6,6 +6,7 @@ public final class ClassRPG extends JavaPlugin {
 //asasas
     @Override
     public void onEnable() {
+        getLogger().info("¡Mi plugin se ha habilitado!");
         // Plugin startup logic
 
     }
