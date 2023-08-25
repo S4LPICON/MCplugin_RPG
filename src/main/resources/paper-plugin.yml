@@ -1,0 +1,7 @@
+name: ClassRPG
+version: '${project.version}'
+main: s4lpicon.classrpg.ClassRPG
+api-version: '1.20'
+load: STARTUP
+authors: [S4LPICON]
+description: test for a class plugin.
