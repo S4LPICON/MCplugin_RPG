@@ -1,5 +1,6 @@
 package s4lpicon.classrpg;
 
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -18,11 +19,18 @@ public final class ClassRPG extends JavaPlugin {
         // Plugin shutdown logic
     }
     @Override
-    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (command.getName().equalsIgnoreCase("miComando")) {
-            sender.sendMessage("¡Hola desde mi comando!");
-            return true;
+    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+        // Verificar si el comando es "miComando"
+        if (cmd.getName().equalsIgnoreCase("miComando")) {
+            // Verificar si el remitente es un jugador
+            if (sender instanceof Player) {
+                Player player = (Player) sender;
+                player.sendMessage("¡Comando personalizado ejecutado!");
+            } else {
+                sender.sendMessage("Este comando solo se puede ejecutar como jugador.");
+            }
+            return true; // Indicar que el comando fue manejado
         }
-        return false;
+        return false; // El comando no fue manejado
     }
 }
