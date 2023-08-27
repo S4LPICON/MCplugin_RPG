@@ -8,4 +8,4 @@ description: test for a class plugin.
 commands:
   miComando:
     description: Comando personalizado para hacer algo
-    usage: /micomando
+    usage: /micomando <argumento>
