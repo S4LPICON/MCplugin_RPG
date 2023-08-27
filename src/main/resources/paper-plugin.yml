@@ -5,3 +5,7 @@ api-version: '1.20'
 load: STARTUP
 authors: [S4LPICON]
 description: test for a class plugin.
+commands:
+  miComando:
+    description: Comando personalizado para hacer algo
+    usage: /micomando

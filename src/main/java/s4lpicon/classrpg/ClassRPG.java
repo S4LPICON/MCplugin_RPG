@@ -8,12 +8,9 @@ public final class ClassRPG extends JavaPlugin {
     @Override
     public void onEnable() {
         getLogger().info("¡Mi plugin se ha habilitado!");
+        getServer().getPluginManager().registerEvents(new BlockClickListener(), this);
         // Plugin startup logic
 
-    }
-
-    private Process getLogger() {
-        return null;
     }
 
     @Override
